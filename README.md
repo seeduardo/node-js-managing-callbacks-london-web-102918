@@ -155,7 +155,7 @@ async.waterfall([
     });
   },
   (city, callback) => {
-    console.log('The user entered: ' + city);
+    console.log(`The user entered: ${city}`);
     callback();
   }
 ], (err, results) => {
@@ -192,7 +192,7 @@ async.waterfall([
   }
 ], (err, city, weather) => {
   if (err) console.error(err);
-  console.log('The weather in ' + city + ":\n", weather);
+  console.log(`The weather in ${city} \n ${weather}`);
 });
 ```
 
@@ -206,3 +206,5 @@ And there we have it. Using similar steps as in our previous example, we use the
 * The OpenWeatherMap API: http://openweathermap.org/current
 * Kyle Simpson, ["Chapter 2: Callbacks"](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch2.md) in *You Don't Know JS: Async & Performance*.
 * Another Good discussion of callback hell at [callbackhell.com](http://callbackhell.com/)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/node-js-managing-callbacks'>Managing Callbacks</a> on Learn.co and start learning to code for free.</p>
